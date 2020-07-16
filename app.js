@@ -105,6 +105,43 @@ function printName(name) {
     console.log(name);
 }
 let myNameTwo = 'Yap';
-setTimeout(function(){
-    printName(myNameTwo);
-}, 5000);
+// setTimeout(function(){
+//     printName(myNameTwo);
+// }, 5000);
+
+
+// Iterators
+//For each
+
+const collectables = ['Bomag', 'CMI Corp','Wirtgen', 'Catepillar'];
+
+// collectables.forEach(function(element){
+//     console.log(element);
+// });
+
+collectables.forEach(element=> {
+    console.log(element);
+});
+
+collectables.forEach(element=> {
+    if (element.length > 6){
+        console.log(element)
+    }
+});
+
+// map
+const someNumbers = [23, 65, 347, 34];
+
+const addFive = someNumbers.map(element => {
+    return element + 5;   // [28,70,352,39]
+});
+
+console.log(addFive);
+
+// filter
+const filterNumbers = someNumbers.filter(element => {
+    if (element > 50) {
+        return element;   //[65,347]
+    }
+});
+console.log(filterNumbers)
